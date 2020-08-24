@@ -1,12 +1,65 @@
 <mvc:View controllerName="QRCodeScanner.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m">
+	displayBlock="true" xmlns="sap.m" 	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" >
 	<App>
-		<pages>
-			<Page title="test">
-				<content>
-					<Label text="Scan QR" />
-					<Button text="Scan" press="onScanClick" />
-				</content>
+		<pages title="Scan QR code">
+			<Page title="Scan QR code">
+			
+						<customHeader>
+							<Bar>
+								<contentLeft>
+									<Text text="Custom QR Code Scanner" />
+								</contentLeft>
+								<contentRight>
+									<Button id="scan" text="Scan"  press="onScanClick" />
+									
+								</contentRight>
+							</Bar>
+						</customHeader>
+						<VBox class="sapUiSmallMargin" id="resultBox">
+		<f:Form id="FormDisplay354"
+			editable="false">
+			<f:title>
+				<core:Title text="Scan result:" />
+			</f:title>
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="3"
+					labelSpanL="3"
+					labelSpanM="3"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="4"
+					emptySpanL="4"
+					emptySpanM="4"
+					emptySpanS="0"
+					columnsXL="1"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer>
+					<f:formElements>
+						<f:FormElement label="Scanned Result">
+							<f:fields>
+								<Text text="No data to show" id="result"  />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Format">
+							<f:fields>
+								<Text text="Please click on Scan" id="format"/>
+							</f:fields>
+						</f:FormElement>
+						
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+	</VBox>
+					
+				
 			</Page>
 		</pages>
 	</App>
