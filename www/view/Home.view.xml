@@ -1,0 +1,13 @@
+<mvc:View controllerName="QRCodeScanner.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="test">
+				<content>
+					<Label text="Scan QR" />
+					<Button text="Scan" press="onScanClick" />
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
